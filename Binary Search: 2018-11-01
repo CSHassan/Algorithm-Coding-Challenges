@@ -1,0 +1,61 @@
+        /*Binary Search implementation
+         * Date:2018-11-01
+         * Time:around 40 mins
+         * Question: Implement a Basic Binary search
+        */
+
+        static void leftRotate(int[] arr, int d, int n)
+        {
+            for (int i = 0; i < d; i++)
+                leftRotatebyOne(arr, n);
+        }
+
+        static void leftRotatebyOne(int[] arr, int n)
+        {
+            int i;
+            int temp = arr[0];
+            Console.WriteLine(temp);
+            for (i = 0; i < n - 1; i++)
+                arr[i] = arr[i + 1];
+
+            arr[i] = temp;
+        }
+
+        /* utility function to print an array */
+        static void printArray(int[] arr)   
+        {
+            
+            for (int i = 0; i < arr.Length; i++)
+                Console.Write(arr[i] + " ");
+            
+        }
+
+        static void binarysearch(int[] a, int search, int low, int high)
+        {
+           
+            if (search < low)
+            {
+                Console.WriteLine("nofound");
+
+            }
+            int mid = low + ((high - low) / 2);
+            if (a[mid] > search)
+            {
+                binarysearch(a, search, low, mid - 1);
+                Console.WriteLine("lower that" + a[mid]);
+
+            }
+            else if (a[mid] < search)
+            {
+                binarysearch(a, search, mid+1, high);
+                Console.WriteLine("higher than" + a[mid]);
+            }
+
+            else if (a[mid] == search)
+            {
+                int y = a[mid];
+                Console.WriteLine("found:"+y);
+            
+            }
+            
+        }
