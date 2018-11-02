@@ -1,0 +1,38 @@
+    /*    Validate a string  
+         * Date:2018-11-02
+         * Time:around 30 mins
+         * Question: Implement a bool that takes in a string that makes sure that a username is greater than 6 and less then 16,
+         * also has to have a (-).
+        */
+  
+         public static bool Validate(string username)
+        {
+            if (string.IsNullOrEmpty(username) ||
+            username.Length > 16 ||
+            username.Length < 6)
+            {
+                return false;
+            }
+            else if (!Regex.IsMatch(username, @"^[a-zA-Z^0-9\S]+$") || !Char.IsLetter(username[0]))
+            {
+
+
+                return false;
+
+            }
+            
+        
+            else
+            {
+                return true;
+            }
+                throw new NotImplementedException("Waiting to be implemented.");
+        }
+        
+          static void Main(string[] args)
+        {
+              Console.WriteLine(Validate("Mike-Standish")); // Valid username
+
+              Console.WriteLine(Validate("Mike Standish")); // Invalid username
+              
+        }
