@@ -1,5 +1,5 @@
  /*       Unique
-         * returns true if all the char in the array is unique
+         * Take a string and displays if all the char in the array is unique
          * Date:2018-11-03
          * Time:around 25 mins
          * Question: make a function to check if all the char in the string is unique.
@@ -7,8 +7,9 @@
         */
 
  
- public static bool Unique(char[] text)
+ public static bool Unique(string name)
         {
+        char[] text = name.ToCharArray();
             if (IsUnique(text) == true)
             {
                 Console.WriteLine("Not UNIQUE");
