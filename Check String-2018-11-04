@@ -27,5 +27,14 @@
 
             return Array.Equals(a,b);
         }
+         static void Main(string[] args)
+        {
         
+            string str1 = "hello";
+            string str2 = "elloh";
+            checkstring(str1, str2);
+        
+        
+        
+        }
        
