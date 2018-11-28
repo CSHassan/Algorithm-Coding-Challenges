@@ -1,3 +1,11 @@
+ /*    Get the max difference in a array
+         * Date:2018-11-27
+         * Time:around 10 mins
+         * Question: Maximum difference between two elements such that larger element appears after the smaller number
+         * Link:https://www.geeksforgeeks.org/maximum-difference-between-two-elements/
+        */
+
+
 public static int MaxDif(int[] arr)
         {
             int dif;
