@@ -39,3 +39,7 @@ public static int MaxDif(int[] arr)
 
                 return dif;
         }
+        
+          //Max difference;
+            int[] arr = { 2, 3, 5, 6, 10,1};
+            Console.WriteLine("result: " + MaxDif(arr));
