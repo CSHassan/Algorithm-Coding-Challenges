@@ -1,0 +1,33 @@
+public static int MaxDif(int[] arr)
+        {
+            int dif;
+            int min = arr[0], max =0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if(arr[i]> max)
+                {
+                    max = arr[i];
+                }
+               
+            }
+
+            for (int j = 0; j < arr.Length; j++)
+            {
+                if (arr[j] < min)
+                {
+                    min = arr[j];
+
+                }
+            }
+
+                Console.WriteLine("max:" + max + " " + "min:" + min);
+            dif = max - min;
+                //for(int i = arr.Length;i>0;i++)
+                //    for(int j = 0; i < arr.Length; j++)
+                //    {
+
+                //    }
+
+                return dif;
+        }
