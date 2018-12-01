@@ -18,3 +18,6 @@ public static int min2(int[] input)
 
             return nmin;
         }
+               //second smallest number
+            //int[] input = { 0, 8, 1,2, 10, 12 };
+            //Console.WriteLine("result: " + min2(input));
