@@ -1,0 +1,20 @@
+public static int min2(int[] input)
+        {
+            int min = input[0], nmin =input[1];
+
+            for(int i = 0; i < input.Length; i++)
+            {
+                if (input[i] < min)
+                {
+                    nmin = min;
+                    min = input[i];
+                }
+                else if(input[i] < nmin)
+                {
+                    nmin= input[i];
+                }
+
+            }
+
+            return nmin;
+        }
