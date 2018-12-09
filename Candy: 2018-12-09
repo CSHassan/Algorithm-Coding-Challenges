@@ -49,3 +49,12 @@
             }
             return total;
         }
+
+
+    int[] kids = { 2, 4, 2, 6, 1, 7, 8, 9, 2, 1 };
+            // test cases
+            //{ 2, 4, 2, 6, 1, 7, 8, 9, 2, 1 };
+            // {2,4,3,5,2,6,4,5,};               
+            //{ 4, 6, 4, 5, 6, 2 };
+            int n = kids.Length;
+            Console.WriteLine("total candies needed: "+candy(n, kids));
