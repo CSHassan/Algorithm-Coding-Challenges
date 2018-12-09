@@ -1,0 +1,51 @@
+ static long candy(int n, int[] arr)
+        {
+            int total = 0;
+            int candy = 1;
+            int[] newarr = new int[arr.Length];
+
+            for (int u = 0; u < n; u++)// set all the variable in the new int as 1
+            {
+                newarr[u] = 1;
+            }
+
+            //search from the top to bottom to find a increasing pattern and change it accordingly
+
+            for (int i = 1; i < arr.Length; i++)
+            {
+
+                if (arr[i] > arr[i - 1])// and if the child has better score then previous, give him more candies
+                {
+                    newarr[i] = newarr[i - 1] + candy;// add 1 candy more from what the previous child was holding.
+                }
+            }
+
+            //  search from the bottom to top to find a decreasing pattern and change the number of candies accordingly.
+            for (int k = n -1; k > 0; k--)
+            {
+                if (arr[k] < arr[k - 1])// if the previous child has a better score than our current child ( *remeber we are reversing the list so it will be from the bottom)
+                {
+                    if (newarr[k - 1] < newarr[k] + candy)// and our current child would be greater 
+                    {
+                        newarr[k - 1] = newarr[k] + candy;
+                    }
+
+                    else
+                    {
+                        newarr[k - 1] = newarr[k - 1]; //keep the same value
+                    }
+                  
+                }
+            }
+
+
+
+
+            for (int j = 0; j < arr.Length; j++)//count the total 
+            {
+
+                Console.WriteLine(newarr[j]);
+                total = total + newarr[j];
+            }
+            return total;
+        }
