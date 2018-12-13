@@ -1,0 +1,33 @@
+ /*
+ *Complete the function hourglassSum in the editor below. It should return an integer, the maximum hourglass sum in the array. hourglassSum has the following parameter(s):
+ *arr: an array of integers
+ *https://www.hackerrank.com/challenges/2d-array/problem
+ 
+ 
+ */
+ static int hourglassSum(int[][] anArray) {
+        
+       int max_sum = int.MinValue;
+        int col=6;
+        int row=6;
+        
+         if (row < 3 || col < 3)
+        return -1;
+        
+        for(int n=0; n<col-2;n++){
+            for(int o=0;o<row -2;o++)
+            {
+             int result;
+           result = anArray[n][o] + anArray[n][o+1] + anArray[n][o+2] + anArray[n+1][o+1]
+             + anArray[n+2][o] + anArray[n+2][o+1] + anArray[n+2][o+2];  
+                
+        
+                
+            max_sum = Math.Max(max_sum, result);
+                
+            }
+           }
+        return max_sum;
+       
+        
+    }
