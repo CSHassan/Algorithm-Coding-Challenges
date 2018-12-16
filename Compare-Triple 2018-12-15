@@ -1,0 +1,27 @@
+ // Complete the compareTriplets function below.
+    static List<int> compareTriplets(List<int> a, List<int> b) {
+
+       int pointA=0,pointB=0;
+       List<int> total = new List<int>();
+        
+        
+        for(int i=0;i<a.Count;i++){
+       
+                if(a[i]>b[i]){
+                    pointA++;
+                }
+                else if (a[i]<b[i]){
+                    pointB++;
+                }
+                else if (a[i]==b[i]){
+
+                }
+            }
+        
+        total.Add(pointA);
+        total.Add(pointB);
+
+        
+        return total;
+
+    }
