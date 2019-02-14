@@ -1,0 +1,39 @@
+
+
+static int[] quicksort(int[] arr ,int low ,int high)
+        {
+            int pivot = arr[arr.Length/2];
+            high = high - 1;
+            
+           low=arr[0];
+
+            for (int i = 0; i < arr.Length; i++)
+                 {
+                if (arr[i] >= pivot)
+                {
+                    
+
+                    swap(arr, i, high);
+
+                }
+                if (arr[high] <= pivot)
+                {
+
+                    swap(arr, high, i);
+                    high--;
+                }
+
+            }
+            
+
+            return arr;
+        }
+        static void swap(int[] arr ,int low , int high)
+        {
+            Console.WriteLine("swapping: " + arr[low] + " " + "with: " + arr[high]);
+            
+            int temp = arr[low];
+            arr[low] = arr[high];
+            arr[high] = temp;
+            
+        }
