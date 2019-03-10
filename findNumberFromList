@@ -1,0 +1,24 @@
+static string findNumber(List<int> arr, int k) {
+        bool flag = false;
+        
+        int[] ar = arr.ToArray();
+
+         for(int i = 0; i < ar.Length; i++)
+            {
+                if(ar[i].Equals(k))
+                {
+                    flag = true;
+                    
+                }
+                
+            }
+        if(flag ==true){
+            return "YES";
+        }
+        else
+        {
+           return "NO";
+        }
+
+
+    }
