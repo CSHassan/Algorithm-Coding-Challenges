@@ -1,0 +1,19 @@
+//Still need to complete
+
+static void sockMerchant(int n, int[] arr)
+        {
+            Dictionary<int, int> Pairs = new Dictionary<int, int>();
+           for(int i =0; i< arr.Length; i++)
+            {
+                Pairs.Add(i, arr[i]);
+            }
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                
+                    Console.WriteLine(Pairs[arr[i]]);
+                
+               
+            }
+
+        }
