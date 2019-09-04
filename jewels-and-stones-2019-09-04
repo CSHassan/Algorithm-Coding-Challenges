@@ -1,0 +1,34 @@
+// easy leet code: https://leetcode.com/problems/jewels-and-stones/
+//https://leetcode.com/problems/jewels-and-stones
+//Runtime: 76 ms Memory Usage: 21.2 MB
+//Note for future: Could have used a map/directory to get a faster time
+
+  public static int NumJewelsInStones(string J, string S)
+        {
+            char[] jewel = J.ToCharArray();
+            char[] stone = S.ToCharArray();
+            int output = 0;
+            foreach (char ch in jewel)
+            {
+                for (int i = 0; i < stone.Length; i++)
+                {
+
+                    if (stone[i] == ch)
+                    {
+                        output++;
+                    }
+                    
+                }
+            }
+            return output;
+        }
+        
+ static void Main(string[] args)
+        {
+            string j = "aA";
+            string s = "aAAbbbb";
+
+
+           int output = NumJewelsInStones(j, s);
+            Console.WriteLine(output);
+       }
