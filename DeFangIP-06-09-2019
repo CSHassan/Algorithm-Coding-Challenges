@@ -1,0 +1,49 @@
+//leetcode easy: https://leetcode.com/problems/defanging-an-ip-address/
+//could have again used a dictonary to make it 10x easier
+
+public static string DefangIPaddr(string address)
+        {
+           
+            char dot = '.';
+            int c = 0 ;
+            char[] add = address.ToCharArray();
+            char[] newarr = new char[add.Length*3];
+
+            if (add[0] != dot)
+            {
+                newarr[0] = add[0];
+                c++;
+            }
+
+            for (int i =0; i < add.Length-1; i++)
+            {
+              
+                //else
+                //{
+                //    newarr[c] = '[';
+                //    newarr[c + 1] = dot;
+                //    newarr[c + 2] = ']';
+                //    c++;
+                //}
+
+
+                if (add[i+1] == dot)
+                {
+                    newarr[c] = '[';
+                    newarr[c + 1] = dot;
+                    newarr[c + 2] = ']';
+                    c++;
+                }
+                else
+                {
+                    var r = add[i];
+                    newarr[c] = r;
+                    c++;
+                }
+            }
+                
+           
+            string result = new string (newarr);
+           
+            return result;
+        }
