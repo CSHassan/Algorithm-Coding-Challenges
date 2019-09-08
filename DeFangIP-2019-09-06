@@ -36,8 +36,7 @@ public static string DefangIPaddr(string address)
                 }
                 else
                 {
-                    var r = add[i];
-                    newarr[c] = r;
+                    newarr[c] = add[i];
                     c++;
                 }
             }
