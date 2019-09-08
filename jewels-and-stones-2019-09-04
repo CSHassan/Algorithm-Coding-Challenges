@@ -23,7 +23,6 @@
             return output;
         }
         
-        
  static void Main(string[] args)
         {
             string j = "aA";
