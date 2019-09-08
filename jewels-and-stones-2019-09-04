@@ -28,7 +28,6 @@
             string j = "aA";
             string s = "aAAbbbb";
 
-
-           int output = NumJewelsInStones(j, s);
+            int output = NumJewelsInStones(j, s);
             Console.WriteLine(output);
        }
